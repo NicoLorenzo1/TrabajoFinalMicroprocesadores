@@ -92,7 +92,6 @@ main:
 	nop
 	rjmp loopmain
 
-interrup_boton:
 botonesTimer:
 
 	in r17, SREG
@@ -218,37 +217,37 @@ set9:
 	rjmp _tmr0_out
 
 setA:
-    cpi r16, 11
+    cpi r16, 10
     brne setB
     ldi r16,0b00010001
     call showDisplay
 	rjmp _tmr0_out
 setB:
-    cpi r16, 12
+    cpi r16, 11
     brne setC
     ldi r16,0b00000000
     call showDisplay
 	rjmp _tmr0_out
 setC:
-    cpi r16, 13
+    cpi r16, 12
     brne setD
     ldi r16,0b01100011
     call showDisplay
 	rjmp _tmr0_out
 setD:
-    cpi r16, 14
+    cpi r16, 13
     brne setE
     ldi r16,0b00000011
     call showDisplay
 	rjmp _tmr0_out
 setE:
-    cpi r16, 15
+    cpi r16, 14
     brne set9
     ldi r16,0b01100001
     call showDisplay
 	rjmp _tmr0_out
 setF:
-    cpi r16, 16
+    cpi r16, 15
     ldi r16,0b01110001
     call showDisplay
 	rjmp _tmr0_out
